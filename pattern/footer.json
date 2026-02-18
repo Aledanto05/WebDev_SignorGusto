@@ -1,0 +1,6 @@
+{
+  "title": "Alt Focus Footer",
+  "slug": "alt-focus/footer",
+  "categories": ["footer"],
+  "content": "\n<footer class=\"wp-block-group footer has-dark-background-color has-background\">\n<div class=\"wp-block-columns\">\n<div class=\"wp-block-column\"><h3 class=\"wp-block-heading\">Alt Focus</h3><p>Creatività digitale al servizio del tuo business.</p></div>\n\n<div class=\"wp-block-column\"><h3 class=\"wp-block-heading\">Link Rapidi</h3></div>\n</div>\n\n<hr class=\"wp-block-separator has-alpha-channel-opacity is-style-wide\"/>\n<p class=\"has-text-align-center\">© 2026 Alt Focus. Tutti i diritti riservati.</p>\n</footer>\n"
+}

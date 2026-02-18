@@ -1,0 +1,5 @@
+{
+  "__file": "wp_block",
+  "title": "Alt Focus Navbar",
+  "content": "\n<header class=\"wp-block-group navbar has-white-background-color has-background\" style=\"position:sticky;top:0px;padding-top:15px;padding-bottom:15px;border-bottom-color:rgba(217,70,239,0.2);border-bottom-width:1px;box-shadow:0 20px 60px rgba(217,70,239,0.2)\">\n<div class=\"wp-block-group\">\n<div class=\"wp-block-group logo\" style=\"font-size:24px;font-weight:800\"><span>ALT</span> FOCUS</div>\n\n\n\n\n\n<div class=\"wp-block-buttons\">\n<div class=\"wp-block-button btn-nav\"><a class=\"wp-block-button__link has-white-color has-primary-background-color has-text-color has-background wp-element-button\" style=\"border-radius:50px;font-weight:700\">Contatti</a></div>\n</div>\n</div>\n</header>\n"
+}

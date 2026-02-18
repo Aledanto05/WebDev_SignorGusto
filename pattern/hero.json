@@ -1,0 +1,6 @@
+{
+  "title": "Alt Focus Hero",
+  "slug": "alt-focus/hero",
+  "categories": ["header"],
+  "content": "\n<section class=\"wp-block-group hero\">\n<div class=\"wp-block-group hero-content\">\n<h1 class=\"wp-block-heading hero-title\">Trasforma il Tuo <span class=\"highlight\">Brand</span> con <span class=\"highlight\">Creatività</span> Digitale</h1>\n\n<p class=\"hero-subtitle\">Social Marketing, Web Design e Strategie Digitali Vincenti</p>\n\n<div class=\"wp-block-buttons\">\n<div class=\"wp-block-button btn btn-primary\"><a class=\"wp-block-button__link wp-element-button\">Inizia il Progetto</a></div>\n\n<div class=\"wp-block-button btn btn-secondary\"><a class=\"wp-block-button__link wp-element-button\">Vedi i Nostri Lavori</a></div>\n</div>\n</div>\n</section>\n"
+}
