@@ -5,43 +5,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signor Gusto - Marketing per il Food & Wine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- ===================== NAVBAR ===================== -->
     <header class="navbar">
         <div class="container">
-
             <a href="#home" class="branding">
-                <img src="logo.jpeg" alt="Signor Gusto Logo" class="logo-img">
+                <img src="assets/img/logo.jpeg" alt="Signor Gusto Logo" class="logo-img">
                 <div class="logo-text"><span>SIGNOR</span> GUSTO</div>
             </a>
 
+            <!-- Menu desktop (originale) -->
             <nav class="nav-menu">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Servizi</a></li>
-                    <li><a href="#portfolio">Case History</a></li>
+                    <li><a href="#sectors">Settori</a></li>
                     <li><a href="#about">Agenzia</a></li>
-                    <li><a href="#contact" class="btn-nav">Richiedi Audit</a></li>
+                    <li><a href="#contact" class="btn-nav">Richiedi una Consulenza</a></li>
                 </ul>
             </nav>
+
+            <!-- Hamburger (NUOVO — solo mobile) -->
+            <button class="hamburger" id="hamburger" aria-label="Apri menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
+
+        <!-- Mobile dropdown (NUOVO) -->
+        <nav class="mobile-menu" id="mobile-menu">
+            <a href="#home">Home</a>
+            <a href="#services">Servizi</a>
+            <a href="#sectors">Settori</a>
+            <a href="#about">Agenzia</a>
+            <a href="#contact">Richiedi Audit</a>
+        </nav>
     </header>
 
+    <!-- ===================== HERO (originale) ===================== -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1 class="hero-title">Marketing che ha <br><span>Buon Gusto</span></h1>
-            <p class="hero-subtitle">Strategie Digitali & Telemarketing B2B per Cantine Vinicole e Produttori Alimentari
-            </p>
+            <p class="hero-subtitle">Strategie Digitali & Telemarketing B2B per Cantine Vinicole e Produttori Alimentari</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Parla con un Esperto</a>
-                <a href="#portfolio" class="btn btn-secondary">Vedi Risultati</a>
+                <a href="#contact" class="btn btn-primary">Richiedi una Consulenza</a>
+                <a href="#sectors" class="btn btn-secondary">Vedi i Settori</a>
             </div>
         </div>
     </section>
 
+    <!-- ===================== CHI SIAMO (spostato al 2° posto) ===================== -->
+    <section id="about" class="about" style="background: #121212; padding: 100px 0;">
+        <div class="container" style="display: flex; align-items: center; gap: 50px; flex-wrap: wrap;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 class="section-title" style="text-align: left;">Chi Siamo</h2>
+                <p style="color: #a1a1aa; margin-bottom: 20px;">
+                    Signor Gusto nasce per un'esigenza specifica: dare voce alle eccellenze enogastronomiche italiane.
+                    Non siamo generalisti, parliamo la lingua del vino e del cibo.
+                </p>
+                <ul style="list-style: none; color: #fff; margin-bottom: 30px;">
+                    <li style="margin-bottom: 10px;">✓ Specializzati in Ho.Re.Ca.</li>
+                    <li style="margin-bottom: 10px;">✓ Database di 15.000+ Contatti</li>
+                    <li>✓ Reportistica trasparente</li>
+                </ul>
+                <a href="#contact" class="btn btn-secondary">Scopri il Metodo</a>
+            </div>
+            <div style="flex: 1; min-width: 300px; height: 400px; background: linear-gradient(45deg, #a60f08, #1e1e1e); border-radius: 8px; display: flex; justify-content: center; align-items: center;">
+                <img src="assets/img/logo.jpeg" alt="Signor Gusto Logo" style="width: 50%; height: 50%; object-fit: cover; border-radius: 8px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PARTNER CAROUSEL (NUOVO) ===================== -->
+    <section class="partners-section">
+        <p class="partners-label">I nostri partner di settore</p>
+        <div class="carousel-mask">
+            <div class="carousel-track" id="carousel-track">
+                <!-- Slot loghi: metti i file in img/partner1.png … img/partner8.png -->
+                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1" onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'"></div>
+                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1" onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'"></div>
+                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1" onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'"></div>
+                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1" onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'"></div>
+                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1" onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'"></div>
+                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1" onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'"></div>
+                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1" onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'"></div>
+                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1" onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'"></div>
+                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1" onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'"></div>
+                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1" onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'"></div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SERVIZI / INGREDIENTI DEL SUCCESSO (originale) ===================== -->
     <section id="services" class="services">
         <div class="container">
             <h2 class="section-title">Ingredienti del Successo</h2>
@@ -77,118 +141,202 @@
             </div>
         </div>
     </section>
-        <section id="about" class="about" style="background: #121212; padding: 100px 0;">
-        <div class="container" style="display: flex; align-items: center; gap: 50px; flex-wrap: wrap;">
-            <div style="flex: 1; min-width: 300px;">
-                <h2 class="section-title" style="text-align: left;">Chi Siamo</h2>
-                <p style="color: #a1a1aa; margin-bottom: 20px;">
-                    Signor Gusto nasce per un'esigenza specifica: dare voce alle eccellenze enogastronomiche italiane.
-                    Non siamo generalisti, parliamo la lingua del vino e del cibo.
-                </p>
-                <ul style="list-style: none; color: #fff; margin-bottom: 30px;">
-                    <li style="margin-bottom: 10px;">✓ Specializzati in Ho.Re.Ca.</li>
-                    <li style="margin-bottom: 10px;">✓ Database di 15.000+ Contatti</li>
-                    <li>✓ Reportistica trasparente</li>
-                </ul>
-                <a href="#contact" class="btn btn-secondary">Scopri il Metodo</a>
-            </div>
-            <div
-                style="flex: 1; min-width: 300px; height: 400px; background: linear-gradient(45deg, #a60f08, #1e1e1e); border-radius: 8px; display: flex; justify-content: center; align-items: center;">
-                <span style="font-size: 80px;" ></span>
-                <img src="logo.jpeg" alt="Signor Gusto Logo" style="width: 80%; height: 80%; object-fit: cover;border-radius: 8px;">
-            </div>
-        </div>
-    </section>
 
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2 class="section-title">I Nostri Tavoli Migliori</h2>
-            <p class="section-subtitle">Progetti recenti e risultati ottenuti</p>
-
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div
-                        style="background: linear-gradient(135deg, #a60f08 0%, #c9230c 100%); width: 100%; height: 100%;">
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Cantina Valpolicella</h3>
-                        <p class="portfolio-category">Lead Generation B2B</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div
-                        style="background: linear-gradient(135deg, #f9a823 0%, #d97706 100%); width: 100%; height: 100%;">
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Pastificio Bio</h3>
-                        <p class="portfolio-category">Rebranding & Packaging</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div
-                        style="background: linear-gradient(135deg, #1a1a1a 0%, #a60f08 100%); width: 100%; height: 100%;">
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3 class="portfolio-title">Olio Extravergine</h3>
-                        <p class="portfolio-category">E-Commerce Strategy</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
+    <!-- ===================== TU NON DOVRAI OCCUPARTI DI NULLA (originale) ===================== -->
     <section id="features" class="features-section">
-    <div class="container">
-        <h2 class="section-title">Tu non dovrai occuparti di nulla</h2>
-        <p class="section-subtitle">Penseremo noi a far crescere il tuo business a 360°</p>
+        <div class="container">
+            <h2 class="section-title">Tu non dovrai occuparti di nulla</h2>
+            <p class="section-subtitle">Penseremo noi a far crescere il tuo business a 360°</p>
 
-        <div class="features-grid">
-            <div class="feature-item card-rosso">
-                <div class="feature-header">
-                    <span class="feature-icon">⚙️</span>
-                    <h3 class="feature-title">Sistema Prevedibile</h3>
+            <div class="features-grid">
+                <div class="feature-item card-rosso">
+                    <div class="feature-header">
+                        <span class="feature-icon">⚙️</span>
+                        <h3 class="feature-title">Sistema Prevedibile</h3>
+                    </div>
+                    <p class="feature-text">Cucito su misura come un abito di sartoria, per acquisire e fidelizzare costantemente clienti in target e altospendenti.</p>
                 </div>
-                <p class="feature-text">Cucito su misura come un abito di sartoria, per acquisire e fidelizzare costantemente clienti in target e altospendenti.</p>
-            </div>
 
-            <div class="feature-item card-oro">
-                <div class="feature-header">
-                    <span class="feature-icon">💎</span>
-                    <h3 class="feature-title">Valorizzazione Locale</h3>
+                <div class="feature-item card-oro">
+                    <div class="feature-header">
+                        <span class="feature-icon">💎</span>
+                        <h3 class="feature-title">Valorizzazione Locale</h3>
+                    </div>
+                    <p class="feature-text">Sfruttiamo la qualità del tuo locale con comunicazioni che vanno al cuore dei clienti, spingendoli a tornare più spesso.</p>
                 </div>
-                <p class="feature-text">Sfruttiamo la qualità del tuo locale con comunicazioni che vanno al cuore dei clienti, spingendoli a tornare più spesso.</p>
-            </div>
 
-            <div class="feature-item card-mix">
-                <div class="feature-header">
-                    <span class="feature-icon">📍</span>
-                    <h3 class="feature-title">Punto di Riferimento</h3>
+                <div class="feature-item card-mix">
+                    <div class="feature-header">
+                        <span class="feature-icon">📍</span>
+                        <h3 class="feature-title">Punto di Riferimento</h3>
+                    </div>
+                    <p class="feature-text">Diventa il leader della tua città grazie a foto e video rivoluzionari che ti rendono un protagonista riconosciuto.</p>
                 </div>
-                <p class="feature-text">Diventa il leader della tua città grazie a foto e video rivoluzionari che ti rendono un protagonista riconosciuto.</p>
-            </div>
 
-            <div class="feature-item card-rosso">
-                <div class="feature-header">
-                    <span class="feature-icon">📱</span>
-                    <h3 class="feature-title">Gestione Social & Ads</h3>
+                <div class="feature-item card-rosso">
+                    <div class="feature-header">
+                        <span class="feature-icon">📱</span>
+                        <h3 class="feature-title">Gestione Social & Ads</h3>
+                    </div>
+                    <p class="feature-text">Oltre 250.000€ investiti in campagne per ristoranti con ROI da brividi: siamo la garanzia per le tue pubblicità.</p>
                 </div>
-                <p class="feature-text">Oltre 250.000€ investiti in campagne per ristoranti con ROI da brividi: siamo la garanzia per le tue pubblicità.</p>
-            </div>
 
-            <div class="feature-item card-oro">
-                <div class="feature-header">
-                    <span class="feature-icon">👨‍💼</span>
-                    <h3 class="feature-title">Consulenza Esperta</h3>
+                <div class="feature-item card-oro">
+                    <div class="feature-header">
+                        <span class="feature-icon">👨‍💼</span>
+                        <h3 class="feature-title">Consulenza Esperta</h3>
+                    </div>
+                    <p class="feature-text">Un'ora a settimana dedicata al tuo progetto per monitorare dati, andamento e ottimizzare ogni singolo investimento.</p>
                 </div>
-                <p class="feature-text">Un'ora a settimana dedicata al tuo progetto per monitorare dati, andamento e ottimizzare ogni singolo investimento.</p>
             </div>
         </div>
-    </div>
     </section>
 
+    <!-- ===================== CHI SERVIAMO — SETTORI (NUOVO — sostituisce il portfolio) ===================== -->
+    <section id="sectors" class="sectors-section">
+        <div class="container">
+            <h2 class="section-title">Chi Serviamo</h2>
+            <p class="section-subtitle">Clicca su un settore per scoprire come lavoriamo</p>
+
+            <!-- Tab buttons -->
+            <div class="sector-tabs">
+                <button class="stab active" data-area="area1">🍽️ Food Service</button>
+                <button class="stab" data-area="area2">🏭 Produzione & Brand</button>
+                <button class="stab" data-area="area3">🏨 Hospitality & Eventi</button>
+                <button class="stab" data-area="area4">👨‍🍳 Personal Brand</button>
+            </div>
+
+            <!-- AREA 1 -->
+            <div class="area-panel active" id="area1">
+                <div class="area-intro">
+                    <span class="area-icon">🍽️</span>
+                    <div>
+                        <h3>Food Service — Locali</h3>
+                        <p>Costruiamo brand locali forti, portiamo prenotazioni e fidelizziamo i clienti. Clicca su un tipo di locale per scoprire la strategia dedicata.</p>
+                    </div>
+                </div>
+                <div class="kw-group">
+                    <div class="kw-group-label">Ristorazione</div>
+                    <div class="kw-pills">
+                        <button class="kw-pill" data-key="ristoranti">🍽️ Ristoranti</button>
+                        <button class="kw-pill" data-key="pizzerie">🍕 Pizzerie</button>
+                        <button class="kw-pill" data-key="sushi">🍣 Sushi & Etnica</button>
+                        <button class="kw-pill" data-key="steakhouse">🥩 Steakhouse</button>
+                        <button class="kw-pill" data-key="agriturismi">🌾 Agriturismi</button>
+                        <button class="kw-pill" data-key="catene">🔗 Catene</button>
+                    </div>
+                </div>
+                <div class="kw-group">
+                    <div class="kw-group-label">Bakery & Dolci</div>
+                    <div class="kw-pills">
+                        <button class="kw-pill" data-key="pasticcerie">🧁 Pasticcerie</button>
+                        <button class="kw-pill" data-key="gelaterie">🍦 Gelaterie</button>
+                        <button class="kw-pill" data-key="panifici">🍞 Panifici</button>
+                        <button class="kw-pill" data-key="laboratori">🎂 Laboratori Dolciari</button>
+                    </div>
+                </div>
+                <div class="kw-group">
+                    <div class="kw-group-label">Beverage On Trade</div>
+                    <div class="kw-pills">
+                        <button class="kw-pill" data-key="cocktailbar">🍸 Cocktail Bar</button>
+                        <button class="kw-pill" data-key="distillerie">🥃 Distillerie con Tasting Room</button>
+                        <button class="kw-pill" data-key="torrefazioni">☕ Torrefazioni con Caffetteria</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AREA 2 -->
+            <div class="area-panel" id="area2">
+                <div class="area-intro">
+                    <span class="area-icon">🏭</span>
+                    <div>
+                        <h3>Produzione & Brand Alimentari</h3>
+                        <p>Aziende che producono eccellenze italiane. Marketing orientato a branding, packaging, distribuzione e B2B. Clicca per scoprire la strategia dedicata.</p>
+                    </div>
+                </div>
+                <div class="kw-group">
+                    <div class="kw-group-label">Produttori</div>
+                    <div class="kw-pills">
+                        <button class="kw-pill" data-key="cantine">🍷 Cantine Vinicole</button>
+                        <button class="kw-pill" data-key="birrifici">🍺 Birrifici Artigianali</button>
+                        <button class="kw-pill" data-key="caseifici">🧀 Caseifici</button>
+                        <button class="kw-pill" data-key="salumifici">🥓 Salumifici</button>
+                        <button class="kw-pill" data-key="pastifici">🍝 Pastifici</button>
+                        <button class="kw-pill" data-key="olio">🫒 Produttori di Olio</button>
+                        <button class="kw-pill" data-key="aziende_agricole">🌱 Aziende Agricole</button>
+                        <button class="kw-pill" data-key="conserve">🫙 Produttori di Conserve</button>
+                        <button class="kw-pill" data-key="bibite">🥤 Succhi & Bibite</button>
+                        <button class="kw-pill" data-key="liquori">🍾 Liquori</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AREA 3 -->
+            <div class="area-panel" id="area3">
+                <div class="area-intro">
+                    <span class="area-icon">🏨</span>
+                    <div>
+                        <h3>Hospitality & Eventi</h3>
+                        <p>Non si vende solo cibo, si vende un'esperienza. Costruiamo la narrazione visiva e digitale che trasforma ogni evento in un ricordo indimenticabile.</p>
+                    </div>
+                </div>
+                <div class="kw-group">
+                    <div class="kw-group-label">Strutture & Servizi</div>
+                    <div class="kw-pills">
+                        <button class="kw-pill" data-key="hotel">🏨 Hotel con Ristorante</button>
+                        <button class="kw-pill" data-key="resort">🌴 Resort</button>
+                        <button class="kw-pill" data-key="catering">🍱 Catering</button>
+                        <button class="kw-pill" data-key="banqueting">🎉 Banqueting</button>
+                        <button class="kw-pill" data-key="location">💍 Location Matrimoni</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AREA 4 -->
+            <div class="area-panel" id="area4">
+                <div class="area-intro">
+                    <span class="area-icon">👨‍🍳</span>
+                    <div>
+                        <h3>Personal Brand Gastronomici</h3>
+                        <p>Non vendi il locale — vendi la persona. Costruiamo autorevolezza digitale, crescita social e posizionamento da leader di settore per il tuo profilo.</p>
+                    </div>
+                </div>
+                <div class="kw-group">
+                    <div class="kw-group-label">Professionisti della Cucina</div>
+                    <div class="kw-pills">
+                        <button class="kw-pill" data-key="chef">👨‍🍳 Chef</button>
+                        <button class="kw-pill" data-key="pasticceri">🎂 Pasticceri</button>
+                        <button class="kw-pill" data-key="pizzaioli">🍕 Pizzaioli</button>
+                        <button class="kw-pill" data-key="panificatori">🍞 Maestri Panificatori</button>
+                        <button class="kw-pill" data-key="chef_privati">🥘 Chef Privati</button>
+                        <button class="kw-pill" data-key="chef_consulenti">📋 Chef Consulenti</button>
+                    </div>
+                </div>
+                <div class="kw-group">
+                    <div class="kw-group-label">Professionisti del Beverage</div>
+                    <div class="kw-pills">
+                        <button class="kw-pill" data-key="sommelier">🍷 Sommelier</button>
+                        <button class="kw-pill" data-key="mixologist">🍸 Mixologist</button>
+                        <button class="kw-pill" data-key="bartender">🍹 Bartender</button>
+                        <button class="kw-pill" data-key="coffee_specialist">☕ Coffee Specialist</button>
+                        <button class="kw-pill" data-key="mastro_birraio">🍺 Mastro Birraio</button>
+                        <button class="kw-pill" data-key="vignaiolo">🌿 Vignaiolo</button>
+                    </div>
+                </div>
+                <div class="kw-group">
+                    <div class="kw-group-label">Artigiani del Gusto</div>
+                    <div class="kw-pills">
+                        <button class="kw-pill" data-key="casari">🧀 Casari</button>
+                        <button class="kw-pill" data-key="mastri_salumieri">🥩 Mastri Salumieri</button>
+                        <button class="kw-pill" data-key="prod_olio">🫒 Produttori di Olio</button>
+                        <button class="kw-pill" data-key="cioccolatieri">🍫 Cioccolatieri</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CONTACT (originale) ===================== -->
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Mettiamoci a Tavola</h2>
@@ -211,13 +359,13 @@
         </div>
     </section>
 
+    <!-- ===================== FOOTER (originale) ===================== -->
     <footer class="footer">
         <div class="container">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
                 <div>
                     <h3>SIGNOR GUSTO</h3>
-                    <p style="color: #888; font-size: 14px;">L'agenzia partner per la crescita del tuo business
-                        alimentare.</p>
+                    <p style="color: #888; font-size: 14px;">L'agenzia partner per la crescita del tuo business alimentare.</p>
                 </div>
                 <div>
                     <h3>SERVIZI</h3>
@@ -242,7 +390,20 @@
         </div>
     </footer>
 
-    <script src="custom.js"></script>
+    <!-- ===================== MODAL POPUP (NUOVO) ===================== -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-drag-handle"></div>
+            <button class="modal-close" id="modal-close">&#10005;</button>
+            <div id="m-icon"  class="m-icon"></div>
+            <div id="m-cat"   class="m-cat"></div>
+            <div id="m-title" class="m-title"></div>
+            <div id="m-desc"  class="m-desc"></div>
+            <div id="m-tags"  class="m-tags"></div>
+        </div>
+    </div>
+
+    <script src="assets/js/custom.js"></script>
 </body>
 
 </html>
