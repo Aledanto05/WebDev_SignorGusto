@@ -3,22 +3,6 @@ Theme Name: Signor Gusto - Food & Wine Marketing
 Theme URI: https://signorgusto.it
 Author: Signor Gusto Team
 Description: Tema premium per agenzia marketing verticale Food & Wine
-Version: 1.0
-License: GPL v2 or later
-*/
-
-/* ==================== RESET E VARIABILI ==================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/*
-Theme Name: Signor Gusto - Food & Wine Marketing
-Theme URI: https://signorgusto.it
-Author: Signor Gusto Team
-Description: Tema premium per agenzia marketing verticale Food & Wine
 Version: 2.0
 License: GPL v2 or later
 */
@@ -157,7 +141,7 @@ html, body {
     box-shadow: 0 5px 15px rgba(166, 15, 8, 0.4);
 }
 
-/* ── HAMBURGER (NUOVO) ── */
+/* ── HAMBURGER ── */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -183,7 +167,7 @@ html, body {
 .hamburger.open span:nth-child(2) { opacity: 0; width: 0; }
 .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-/* ── MOBILE MENU (NUOVO) ── */
+/* ── MOBILE MENU ── */
 .mobile-menu {
     display: none;
     flex-direction: column;
@@ -347,7 +331,53 @@ html, body {
     font-size: 15px;
 }
 
-/* ==================== FEATURES (Tu non dovrai...) ==================== */
+/* ==================== PORTFOLIO ==================== */
+.portfolio {
+    padding: 100px 0;
+    background: var(--dark-bg);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    position: relative;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(166, 15, 8, 0.9) 0%, rgba(201, 35, 12, 0.8) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: var(--transition);
+}
+
+.portfolio-title {
+    color: var(--light);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.portfolio-category {
+    color: var(--accent);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* ==================== FEATURES ==================== */
 .features-section {
     padding: 100px 0;
     background: var(--dark-bg);
@@ -420,70 +450,7 @@ html, body {
     background: linear-gradient(135deg, rgba(166,15,8,0.14) 0%, rgba(249,168,35,0.07) 100%);
 }
 
-/* ==================== CONTACT / FORM ==================== */
-.contact {
-    padding: 100px 0;
-    background: linear-gradient(180deg, var(--dark-secondary) 0%, var(--dark-bg) 100%);
-}
-
-.contact input, .contact textarea, .contact select {
-    width: 100%;
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--light);
-    border-radius: 4px;
-    font-family: inherit;
-    margin-bottom: 0;
-    transition: var(--transition);
-    font-size: 15px;
-}
-.contact input::placeholder,
-.contact textarea::placeholder { color: var(--gray); }
-.contact select option { background: var(--dark-secondary); }
-.contact input:focus, .contact textarea:focus, .contact select:focus {
-    outline: none;
-    border-color: var(--accent);
-    background: rgba(255, 255, 255, 0.08);
-}
-
-/* ==================== FOOTER ==================== */
-.footer {
-    background: #0a0a0a;
-    padding: 80px 0 30px;
-    border-top: 2px solid var(--primary-dark);
-}
-
-.footer h3 {
-    color: var(--light);
-    margin-bottom: 25px;
-    font-size: 18px;
-}
-
-.footer ul { list-style: none; }
-.footer ul li { margin-bottom: 15px; }
-
-.footer a {
-    color: var(--gray);
-    text-decoration: none;
-    transition: var(--transition);
-}
-.footer a:hover { color: var(--primary); }
-
-.footer-bottom {
-    border-top: 1px solid #222;
-    margin-top: 60px;
-    padding-top: 30px;
-    text-align: center;
-    color: #555;
-    font-size: 14px;
-}
-
-/* ============================================================
-   NUOVE SEZIONI AGGIUNTE
-   ============================================================ */
-
-/* ── PARTNER CAROUSEL ── */
+/* ==================== PARTNER CAROUSEL ==================== */
 @keyframes carouselScroll {
     0%   { transform: translateX(0); }
     100% { transform: translateX(-50%); }
@@ -551,26 +518,8 @@ html, body {
 .partner-card:hover img {
     filter: grayscale(0) brightness(1) opacity(1);
 }
-/* Placeholder quando l'immagine non c'è 
-.partner-card .ph {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-    width: 100%;
-    height: 100%;
-}
-.partner-card .ph span { font-size: 22px; opacity: 0.4; }
-.partner-card .ph small {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: var(--gray);
-    text-transform: uppercase;
-}
-*/
-/* ── SETTORI — CHI SERVIAMO ── */
+
+/* ==================== SETTORI ==================== */
 @keyframes panelFadeIn {
     from { opacity: 0; transform: translateY(12px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -581,7 +530,6 @@ html, body {
     background: var(--dark-secondary);
 }
 
-/* Tab buttons */
 .sector-tabs {
     display: flex;
     flex-wrap: wrap;
@@ -614,14 +562,12 @@ html, body {
     color: var(--light);
 }
 
-/* Area panels */
 .area-panel { display: none; }
 .area-panel.active {
     display: block;
     animation: panelFadeIn 0.35s ease both;
 }
 
-/* Area header */
 .area-intro {
     display: flex;
     align-items: flex-start;
@@ -648,7 +594,6 @@ html, body {
     max-width: 680px;
 }
 
-/* Keyword groups */
 .kw-group { margin-bottom: 26px; }
 .kw-group-label {
     font-size: 11px;
@@ -699,7 +644,7 @@ html, body {
     color: var(--light);
 }
 
-/* ── POPUP MODAL ── */
+/* ==================== POPUP MODAL ==================== */
 .modal-overlay {
     position: fixed;
     inset: 0;
@@ -789,420 +734,6 @@ html, body {
     flex-shrink: 0;
 }
 
-/* ============================================================
-   MEDIA QUERIES
-   ============================================================ */
-@media (max-width: 768px) {
-    /* Navbar */
-    .nav-menu { display: none; }
-    .hamburger { display: flex; }
-
-    /* Hero */
-    .hero-title { font-size: 40px; }
-    .hero-subtitle { font-size: 18px; }
-    .hero-buttons { flex-direction: column; align-items: center; }
-    .hero-buttons .btn { width: 100%; max-width: 320px; text-align: center; }
-
-    /* About */
-    .about .container { flex-direction: column !important; }
-
-    /* Services */
-    .section-title { font-size: 34px; }
-    .services-grid { grid-template-columns: 1fr; }
-
-    /* Features */
-    .feature-item { max-width: 100%; flex: 1 1 100%; }
-
-    /* Sectors */
-    .stab { padding: 9px 15px; font-size: 20px; }
-    .area-intro { flex-direction: column; gap: 10px; padding: 20px 18px; }
-    .area-intro p { font-size: 18px;}
-
-    /* Modal */
-    .modal-box { padding: 26px 18px 36px; max-height: 88vh; }
-}
-
-@media (max-width: 480px) {
-    .hero-title { font-size: 32px; }
-    .section-title { font-size: 28px; }
-    .section-subtitle { font-size: 14px; margin-bottom: 40px; }
-    .kw-pill { font-size: 14px; padding: 6px 9px; }
-    .partner-card { width: 150px; height: 66px; }
-    .btn { padding: 14px 24px; font-size: 14px; }
-}
-
-html, body {
-    font-family: var(--font-main);
-    background-color: var(--dark-bg);
-    color: var(--light);
-    line-height: 1.6;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* ==================== ANIMAZIONI ==================== */
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-}
-
-/* ==================== NAVBAR ==================== */
-.navbar {
-    background: rgba(30, 30, 30, 0.95);
-    padding: 15px 0; 
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid var(--primary-dark);
-    backdrop-filter: blur(10px);
-    transition: var(--transition);
-}
-
-.navbar .container {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    max-width: 95%; /* Aumentato dal precedente 1200px per permettere al logo di andare più a sinistra */
-    margin: 0 auto;
-}
-
-/* Branding: tiene uniti logo e testo */
-.branding {
-    display: flex;
-    align-items: center;
-    margin-left: 10px; /* Ridotto drasticamente per portarlo vicino al bordo sinistro */
-    gap: 15px; 
-    text-decoration: none; 
-    transition: var(--transition);
-}
-
-.branding:hover {
-    opacity: 0.9;
-}
-
-/* Stile per l'immagine circolare */
-.logo-img {
-    width: 60px;          
-    height: 60px;         
-    border-radius: 50%;   
-    object-fit: cover;    
-    border: 2px solid var(--accent); 
-    background-color: var(--light); 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-/* Stile per il testo del logo */
-.logo-text {
-    font-family: var(--font-title);
-    font-size: 26px;
-    font-weight: 800;
-    color: var(--light);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    line-height: 1;
-}
-
-.logo-text span {
-    color: var(--primary); 
-}
-
-/* Menu di navigazione */
-.nav-menu ul {
-    display: flex;
-    list-style: none;
-    gap: 35px;
-    align-items: center;
-}
-
-.nav-menu a {
-    color: var(--gray-light);
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 600;
-    text-transform: uppercase;
-    transition: var(--transition);
-}
-
-.nav-menu a:hover {
-    color: var(--accent); 
-}
-
-/* Bottone nella Navbar */
-.btn-nav {
-    background: var(--primary);
-    color: var(--light) !important;
-    padding: 10px 25px !important;
-    border-radius: 4px; 
-    transition: var(--transition);
-    margin-right: 10px; /* Aggiunto un piccolo margine anche a destra per simmetria */
-}
-
-.btn-nav:hover {
-    background: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(166, 15, 8, 0.4);
-}
-/* ==================== HERO SECTION ==================== */
-.hero {
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: radial-gradient(circle at center, #2a0505 0%, var(--dark-bg) 100%);
-    position: relative;
-    padding: 80px 20px;
-}
-
-.hero-content {
-    max-width: 800px;
-    text-align: center;
-    z-index: 2;
-    animation: fadeInUp 0.8s ease;
-}
-
-.hero-title {
-    font-family: var(--font-title);
-    font-size: 64px;
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 25px;
-    color: var(--light);
-}
-
-.hero-title span {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero-subtitle {
-    font-size: 22px;
-    color: var(--gray);
-    margin-bottom: 40px;
-    font-weight: 300;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-/* ==================== BUTTONS ==================== */
-.btn {
-    padding: 16px 35px;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    text-decoration: none;
-    transition: var(--transition);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-    color: var(--light);
-    box-shadow: 0 10px 25px rgba(201, 35, 12, 0.3);
-}
-
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(201, 35, 12, 0.5);
-}
-
-.btn-secondary {
-    background: transparent;
-    color: var(--light);
-    border: 2px solid var(--accent); /* Oro */
-}
-
-.btn-secondary:hover {
-    background: var(--accent);
-    color: var(--dark-bg);
-}
-
-/* ==================== SERVICES ==================== */
-.services {
-    padding: 100px 0;
-    background: var(--dark-secondary);
-}
-
-.section-title {
-    font-family: var(--font-title);
-    font-size: 48px;
-    font-weight: 800;
-    text-align: center;
-    margin-bottom: 15px;
-    color: var(--light);
-}
-
-.section-subtitle {
-    text-align: center;
-    color: var(--accent);
-    font-size: 18px;
-    margin-bottom: 70px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.service-card {
-    background: rgba(255, 255, 255, 0.03);
-    padding: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    transition: var(--transition);
-}
-
-.service-card:hover {
-    border-color: var(--primary);
-    transform: translateY(-10px);
-    background: rgba(166, 15, 8, 0.1); /* Sfondo rosso scuro leggero */
-}
-
-.service-icon {
-    font-size: 40px;
-    margin-bottom: 25px;
-    color: var(--accent);
-}
-
-.service-title {
-    font-size: 22px;
-    margin-bottom: 15px;
-    color: var(--light);
-}
-
-.service-description {
-    color: var(--gray);
-    font-size: 15px;
-}
-
-/* ==================== PORTFOLIO ==================== */
-.portfolio {
-    padding: 100px 0;
-    background: var(--dark-bg);
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.portfolio-item {
-    position: relative;
-    height: 300px;
-    border-radius: 8px;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.portfolio-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(0deg, rgba(166, 15, 8, 0.9) 0%, rgba(201, 35, 12, 0.8) 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-    transition: var(--transition);
-}
-
-
-.portfolio-title {
-    color: var(--light);
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-.portfolio-category {
-    color: var(--accent);
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-
-
-/* Griglia migliorata per centrare l'ultima riga */
-.features-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centra le card se sono meno della larghezza totale (es. le 2 di sotto) */
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.feature-item {
-    flex: 1 1 350px; /* Le card provano a occupare 350px e crescono se necessario */
-    max-width: 380px; /* Limita la larghezza massima per non farle sembrare troppo giganti */
-    position: relative;
-    padding: 35px;
-    border-radius: 15px;
-    min-height: 220px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    transition: var(--transition);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Header della card: icona e titolo sulla stessa riga */
-.feature-header {
-    display: flex;
-    align-items: center;
-    gap: 15px; /* Spazio tra emoji e testo */
-}
-
-.feature-icon {
-    font-size: 32px; /* Dimensione ridotta per stare in linea */
-    line-height: 1;
-}
-
-.feature-title {
-    font-family: var(--font-title);
-    color: var(--light);
-    font-size: 22px;
-    font-weight: 700;
-    margin: 0; /* Rimuove margini di default per allineamento perfetto */
-    line-height: 1.2;
-}
-
-.feature-text {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 15px;
-    line-height: 1.6;
-    margin: 0;
-}
-
-/* Hover Effect */
-.feature-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
-    border-color: var(--accent);
-}
-
 /* ==================== CONTACT / FORM ==================== */
 .contact {
     padding: 100px 0;
@@ -1219,8 +750,11 @@ html, body {
     font-family: inherit;
     margin-bottom: 0;
     transition: var(--transition);
+    font-size: 15px;
 }
-
+.contact input::placeholder,
+.contact textarea::placeholder { color: var(--gray); }
+.contact select option { background: var(--dark-secondary); }
 .contact input:focus, .contact textarea:focus, .contact select:focus {
     outline: none;
     border-color: var(--accent);
@@ -1240,23 +774,15 @@ html, body {
     font-size: 18px;
 }
 
-.footer ul {
-    list-style: none;
-}
-
-.footer ul li {
-    margin-bottom: 15px;
-}
+.footer ul { list-style: none; }
+.footer ul li { margin-bottom: 15px; }
 
 .footer a {
     color: var(--gray);
     text-decoration: none;
     transition: var(--transition);
 }
-
-.footer a:hover {
-    color: var(--primary);
-}
+.footer a:hover { color: var(--primary); }
 
 .footer-bottom {
     border-top: 1px solid #222;
@@ -1267,9 +793,48 @@ html, body {
     font-size: 14px;
 }
 
-/* MEDIA QUERIES */
+/* ============================================================
+   MEDIA QUERIES - DEVONO RIMANERE QUI IN FONDO
+   ============================================================ */
+
 @media (max-width: 768px) {
-    .hero-title { font-size: 40px; }
-    .nav-menu { display: none; } /* Mobile menu da implementare */
-    .hero-buttons { flex-direction: column; }
+    /* Navbar */
+    .nav-menu { display: none; }
+    .hamburger { display: flex; }
+
+    /* Hero */
+    .hero-title { font-size: 65px; } 
+    .hero-subtitle { font-size: 18px; }
+    .hero-buttons { flex-direction: column; align-items: center; }
+    .hero-buttons .btn { width: 100%; max-width: 320px; text-align: center; }
+
+    /* About */
+    .about .container { flex-direction: column !important; }
+
+    /* Services */
+    .section-title { font-size: 34px; }
+    .services-grid { grid-template-columns: 1fr; }
+
+    /* Features */
+    .feature-item { max-width: 100%; flex: 1 1 100%; }
+
+    /* Sectors */
+    .stab { padding: 9px 15px; font-size: 20px; }
+    .area-intro { flex-direction: column; gap: 10px; padding: 20px 18px; }
+    .area-intro p { font-size: 18px; }
+
+    /* Modal */
+    .modal-box { padding: 26px 18px 36px; max-height: 88vh; }
+}
+
+@media (max-width: 480px) {
+    /* Smartphone in verticale */
+    .hero-title { font-size: 32px; }
+    .section-title { font-size: 28px; }
+    .section-subtitle { font-size: 14px; margin-bottom: 40px; }
+    .kw-pill { font-size: 14px; padding: 6px 9px; }
+    .partner-card { width: 150px; height: 66px; }
+    .btn { padding: 14px 24px; font-size: 14px; }
+    .stab { padding: 8px 12px; font-size: 14px; }
+
 }
