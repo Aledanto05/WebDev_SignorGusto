@@ -13,6 +13,11 @@
 
 <body>
 
+    <!-- Scroll progress bar -->
+    <div id="scroll-progress"></div>
+    <!-- Cursor dot -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+
     <!-- ===================== NAVBAR ===================== -->
     <header class="navbar">
         <div class="container">
@@ -21,7 +26,7 @@
                 <div class="logo-text"><span>SIGNOR</span> GUSTO</div>
             </a>
 
-            <!-- Menu desktop (originale) -->
+            <!-- Menu desktop-->
             <nav class="nav-menu">
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -32,7 +37,7 @@
                 </ul>
             </nav>
 
-            <!-- Hamburger (NUOVO — solo mobile) -->
+            <!-- Hamburger(mobile) -->
             <button class="hamburger" id="hamburger" aria-label="Apri menu">
                 <span></span>
                 <span></span>
@@ -52,9 +57,26 @@
 
     <!-- ===================== HERO (originale) ===================== -->
     <section id="home" class="hero">
+        <!-- Floating food icons background -->
+        <div class="food-floats" aria-hidden="true">
+            <span class="food-float">🍷</span>
+            <span class="food-float">🍕</span>
+            <span class="food-float">🧀</span>
+            <span class="food-float">🍸</span>
+            <span class="food-float">☕</span>
+            <span class="food-float">🍾</span>
+            <span class="food-float">🫒</span>
+            <span class="food-float">🍝</span>
+            <span class="food-float">🍺</span>
+            <span class="food-float">🥂</span>
+            <span class="food-float">🍋</span>
+            <span class="food-float">🥩</span>
+        </div>
         <div class="hero-content">
+            <div class="hero-badge">✦ Agenzia Food & Wine Marketing</div>
             <h1 class="hero-title">Marketing che ha <br><span>Buon Gusto</span></h1>
-            <p class="hero-subtitle">Strategie Digitali & Telemarketing B2B per Cantine Vinicole e Produttori Alimentari</p>
+            <p class="hero-subtitle">Strategie Digitali & Telemarketing B2B per Cantine Vinicole e Produttori Alimentari
+            </p>
             <div class="hero-buttons">
                 <a href="#contact" class="btn btn-primary">Richiedi una Consulenza</a>
                 <a href="#sectors" class="btn btn-secondary">Vedi i Settori</a>
@@ -62,10 +84,20 @@
         </div>
     </section>
 
-    <!-- ===================== CHI SIAMO (spostato al 2° posto) ===================== -->
+    <!-- Divider -->
+    <div class="section-divider" aria-hidden="true">
+        <div class="section-divider-icons">
+            <span>🍷</span><span>·</span><span>🍽️</span><span>·</span><span>🫒</span><span>·</span><span>☕</span>
+        </div>
+    </div>
+
+    <!-- ===================== CHI SIAMO ===================== -->
     <section id="about" class="about" style="background: #121212; padding: 100px 0;">
+        <!-- Deco icons -->
+        <span class="deco-icon deco-icon-1" aria-hidden="true">🍷</span>
+        <span class="deco-icon deco-icon-2" aria-hidden="true">🧀</span>
         <div class="container" style="display: flex; align-items: center; gap: 50px; flex-wrap: wrap;">
-            <div style="flex: 1; min-width: 300px;">
+            <div style="flex: 1; min-width: 300px;" class="reveal reveal-left">
                 <h2 class="section-title" style="text-align: left;">Chi Siamo</h2>
                 <p style="color: #a1a1aa; margin-bottom: 20px;">
                     Signor Gusto nasce per un'esigenza specifica: dare voce alle eccellenze enogastronomiche italiane.
@@ -78,8 +110,45 @@
                 </ul>
                 <a href="#contact" class="btn btn-secondary">Scopri il Metodo</a>
             </div>
-            <div style="flex: 1; min-width: 300px; height: 400px; background: linear-gradient(45deg, #a60f08, #1e1e1e); border-radius: 8px; display: flex; justify-content: center; align-items: center;">
-                <img src="assets/img/logo.jpeg" alt="Signor Gusto Logo" style="width: 80%; height: 80%; object-fit: cover; border-radius: 8px;">
+            <div class="reveal reveal-right"
+                style="flex: 1; min-width: 300px; height: 400px; background: linear-gradient(45deg, #a60f08, #1e1e1e); border-radius: 8px; display: flex; justify-content: center; align-items: center; position: relative;">
+                <div class="icon-orbit-wrap" aria-hidden="true">
+                    <span class="orbit-icon">🍷</span>
+                    <span class="orbit-icon">🍕</span>
+                    <span class="orbit-icon">🧀</span>
+                    <span class="orbit-icon">☕</span>
+                    <span class="orbit-icon">🫒</span>
+                </div>
+                <img src="assets/img/logo.jpeg" alt="Signor Gusto Logo"
+                    style="position: absolute; width: 70%; height: 70%; object-fit: cover; border-radius: 8px; z-index: 1;">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== STATS STRIP ===================== -->
+    <section class="stats-strip">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal reveal-scale reveal-delay-1">
+                    <span class="stat-icon">🍷</span>
+                    <span class="stat-number" data-target="150">0</span>
+                    <span class="stat-label">Clienti Food & Wine</span>
+                </div>
+                <div class="stat-item reveal reveal-scale reveal-delay-2">
+                    <span class="stat-icon">📊</span>
+                    <span class="stat-number" data-target="250" data-suffix="K€">0</span>
+                    <span class="stat-label">Budget Gestiti in Ads</span>
+                </div>
+                <div class="stat-item reveal reveal-scale reveal-delay-3">
+                    <span class="stat-icon">📞</span>
+                    <span class="stat-number" data-target="15" data-suffix="K+">0</span>
+                    <span class="stat-label">Contatti Database</span>
+                </div>
+                <div class="stat-item reveal reveal-scale reveal-delay-4">
+                    <span class="stat-icon">⭐</span>
+                    <span class="stat-number" data-target="98" data-suffix="%">0</span>
+                    <span class="stat-label">Clienti Soddisfatti</span>
+                </div>
             </div>
         </div>
     </section>
@@ -90,29 +159,57 @@
         <div class="carousel-mask">
             <div class="carousel-track" id="carousel-track">
                 <!-- Slot loghi: metti i file in img/partner1.png … img/partner8.png -->
-                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1" onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'"></div>
-                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1" onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'"></div>
-                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1" onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'"></div>
-                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1" onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'"></div>
-                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1" onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'"></div>
-                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1" onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'"></div>
-                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1" onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'"></div>
-                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1" onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'"></div>
-                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1" onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'"></div>
-                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1" onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'"></div>
+                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1"
+                        onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'">
+                </div>
+                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1"
+                        onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'">
+                </div>
+                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1"
+                        onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'">
+                </div>
+                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1"
+                        onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'">
+                </div>
+                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1"
+                        onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'">
+                </div>
+                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1"
+                        onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'">
+                </div>
+                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1"
+                        onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'">
+                </div>
+                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1"
+                        onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'">
+                </div>
+                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1"
+                        onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'">
+                </div>
+                <div class="partner-card"><img src="assets/img/partner1.jpeg" alt="Partner 1"
+                        onerror="this.parentElement.innerHTML='<div class=\'ph\'><span>🍷</span><small>Partner 1</small></div>'">
+                </div>
 
             </div>
         </div>
     </section>
 
+    <!-- Divider -->
+    <div class="section-divider" style="background: var(--dark-secondary);" aria-hidden="true">
+        <div class="section-divider-icons">
+            <span>🚀</span><span>·</span><span>📸</span><span>·</span><span>🍷</span><span>·</span><span>📱</span>
+        </div>
+    </div>
+
     <!-- ===================== SERVIZI / INGREDIENTI DEL SUCCESSO (originale) ===================== -->
     <section id="services" class="services">
+        <span class="deco-bg-icon" aria-hidden="true">🍷</span>
         <div class="container">
-            <h2 class="section-title">Ingredienti del Successo</h2>
-            <p class="section-subtitle">Il nostro menu di servizi per la tua crescita</p>
+            <h2 class="section-title reveal">Ingredienti del Successo</h2>
+            <p class="section-subtitle reveal reveal-delay-1">Il nostro menu di servizi per la tua crescita</p>
 
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card reveal reveal-delay-1">
                     <div class="service-icon">🍷</div>
                     <h3 class="service-title">Telemarketing B2B</h3>
                     <p class="service-description">
@@ -121,7 +218,7 @@
                     </p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card reveal reveal-delay-2">
                     <div class="service-icon">📸</div>
                     <h3 class="service-title">Food Photography</h3>
                     <p class="service-description">
@@ -130,7 +227,7 @@
                     </p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card reveal reveal-delay-3">
                     <div class="service-icon">🚀</div>
                     <h3 class="service-title">Social & Ads</h3>
                     <p class="service-description">
@@ -142,61 +239,81 @@
         </div>
     </section>
 
+    <!-- Divider -->
+    <div class="section-divider" aria-hidden="true">
+        <div class="section-divider-icons">
+            <span>⚙️</span><span>·</span><span>💎</span><span>·</span><span>📍</span><span>·</span><span>📱</span>
+        </div>
+    </div>
+
     <!-- ===================== TU NON DOVRAI OCCUPARTI DI NULLA (originale) ===================== -->
     <section id="features" class="features-section">
+        <span class="deco-bg-icon" aria-hidden="true">🍽️</span>
         <div class="container">
-            <h2 class="section-title">Tu non dovrai occuparti di nulla</h2>
-            <p class="section-subtitle">Penseremo noi a far crescere il tuo business a 360°</p>
+            <h2 class="section-title reveal">Tu non dovrai occuparti di nulla</h2>
+            <p class="section-subtitle reveal reveal-delay-1">Penseremo noi a far crescere il tuo business a 360°</p>
 
             <div class="features-grid">
-                <div class="feature-item card-rosso">
+                <div class="feature-item card-rosso reveal reveal-delay-1">
                     <div class="feature-header">
                         <span class="feature-icon">⚙️</span>
                         <h3 class="feature-title">Sistema Prevedibile</h3>
                     </div>
-                    <p class="feature-text">Cucito su misura come un abito di sartoria, per acquisire e fidelizzare costantemente clienti in target e altospendenti.</p>
+                    <p class="feature-text">Cucito su misura come un abito di sartoria, per acquisire e fidelizzare
+                        costantemente clienti in target e altospendenti.</p>
                 </div>
 
-                <div class="feature-item card-oro">
+                <div class="feature-item card-oro reveal reveal-delay-2">
                     <div class="feature-header">
                         <span class="feature-icon">💎</span>
                         <h3 class="feature-title">Valorizzazione Locale</h3>
                     </div>
-                    <p class="feature-text">Sfruttiamo la qualità del tuo locale con comunicazioni che vanno al cuore dei clienti, spingendoli a tornare più spesso.</p>
+                    <p class="feature-text">Sfruttiamo la qualità del tuo locale con comunicazioni che vanno al cuore
+                        dei clienti, spingendoli a tornare più spesso.</p>
                 </div>
 
-                <div class="feature-item card-mix">
+                <div class="feature-item card-mix reveal reveal-delay-3">
                     <div class="feature-header">
                         <span class="feature-icon">📍</span>
                         <h3 class="feature-title">Punto di Riferimento</h3>
                     </div>
-                    <p class="feature-text">Diventa il leader della tua città grazie a foto e video rivoluzionari che ti rendono un protagonista riconosciuto.</p>
+                    <p class="feature-text">Diventa il leader della tua città grazie a foto e video rivoluzionari che ti
+                        rendono un protagonista riconosciuto.</p>
                 </div>
 
-                <div class="feature-item card-rosso">
+                <div class="feature-item card-rosso reveal reveal-delay-1">
                     <div class="feature-header">
                         <span class="feature-icon">📱</span>
                         <h3 class="feature-title">Gestione Social & Ads</h3>
                     </div>
-                    <p class="feature-text">Oltre 250.000€ investiti in campagne per ristoranti con ROI da brividi: siamo la garanzia per le tue pubblicità.</p>
+                    <p class="feature-text">Oltre 250.000€ investiti in campagne per ristoranti con ROI da brividi:
+                        siamo la garanzia per le tue pubblicità.</p>
                 </div>
 
-                <div class="feature-item card-oro">
+                <div class="feature-item card-oro reveal reveal-delay-2">
                     <div class="feature-header">
                         <span class="feature-icon">👨‍💼</span>
                         <h3 class="feature-title">Consulenza Esperta</h3>
                     </div>
-                    <p class="feature-text">Un'ora a settimana dedicata al tuo progetto per monitorare dati, andamento e ottimizzare ogni singolo investimento.</p>
+                    <p class="feature-text">Un'ora a settimana dedicata al tuo progetto per monitorare dati, andamento e
+                        ottimizzare ogni singolo investimento.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===================== CHI SERVIAMO — SETTORI (NUOVO — sostituisce il portfolio) ===================== -->
+    <!-- Divider -->
+    <div class="section-divider" style="background: var(--dark-secondary);" aria-hidden="true">
+        <div class="section-divider-icons">
+            <span>🍽️</span><span>·</span><span>🏭</span><span>·</span><span>🏨</span><span>·</span><span>👨‍🍳</span>
+        </div>
+    </div>
+
+    <!-- ===================== CHI SERVIAMO — SETTORI ===================== -->
     <section id="sectors" class="sectors-section">
         <div class="container">
-            <h2 class="section-title">Chi Serviamo</h2>
-            <p class="section-subtitle">Clicca su un settore per scoprire come lavoriamo</p>
+            <h2 class="section-title reveal">Chi Serviamo</h2>
+            <p class="section-subtitle reveal reveal-delay-1">Clicca su un settore per scoprire come lavoriamo</p>
 
             <!-- Tab buttons -->
             <div class="sector-tabs">
@@ -212,7 +329,8 @@
                     <span class="area-icon">🍽️</span>
                     <div>
                         <h3>Food Service — Locali</h3>
-                        <p>Costruiamo brand locali forti, portiamo prenotazioni e fidelizziamo i clienti. Clicca su un tipo di locale per scoprire la strategia dedicata.</p>
+                        <p>Costruiamo brand locali forti, portiamo prenotazioni e fidelizziamo i clienti. Clicca su un
+                            tipo di locale per scoprire la strategia dedicata.</p>
                     </div>
                 </div>
                 <div class="kw-group">
@@ -251,7 +369,8 @@
                     <span class="area-icon">🏭</span>
                     <div>
                         <h3>Produzione & Brand Alimentari</h3>
-                        <p>Aziende che producono eccellenze italiane. Marketing orientato a branding, packaging, distribuzione e B2B. Clicca per scoprire la strategia dedicata.</p>
+                        <p>Aziende che producono eccellenze italiane. Marketing orientato a branding, packaging,
+                            distribuzione e B2B. Clicca per scoprire la strategia dedicata.</p>
                     </div>
                 </div>
                 <div class="kw-group">
@@ -277,7 +396,8 @@
                     <span class="area-icon">🏨</span>
                     <div>
                         <h3>Hospitality & Eventi</h3>
-                        <p>Non si vende solo cibo, si vende un'esperienza. Costruiamo la narrazione visiva e digitale che trasforma ogni evento in un ricordo indimenticabile.</p>
+                        <p>Non si vende solo cibo, si vende un'esperienza. Costruiamo la narrazione visiva e digitale
+                            che trasforma ogni evento in un ricordo indimenticabile.</p>
                     </div>
                 </div>
                 <div class="kw-group">
@@ -298,7 +418,8 @@
                     <span class="area-icon">👨‍🍳</span>
                     <div>
                         <h3>Personal Brand Gastronomici</h3>
-                        <p>Non vendi il locale — vendi la persona. Costruiamo autorevolezza digitale, crescita social e posizionamento da leader di settore per il tuo profilo.</p>
+                        <p>Non vendi il locale — vendi la persona. Costruiamo autorevolezza digitale, crescita social e
+                            posizionamento da leader di settore per il tuo profilo.</p>
                     </div>
                 </div>
                 <div class="kw-group">
@@ -336,23 +457,31 @@
         </div>
     </section>
 
+    <!-- Divider -->
+    <div class="section-divider" aria-hidden="true">
+        <div class="section-divider-icons">
+            <span>✉️</span><span>·</span><span>🤝</span><span>·</span><span>🍷</span><span>·</span><span>🚀</span>
+        </div>
+    </div>
+
     <!-- ===================== CONTACT (originale) ===================== -->
     <section id="contact" class="contact">
+        <span class="deco-bg-icon" aria-hidden="true">🍾</span>
         <div class="container">
-            <h2 class="section-title">Mettiamoci a Tavola</h2>
-            <p class="section-subtitle">Raccontaci il tuo progetto, offriamo noi il primo consulto.</p>
+            <h2 class="section-title reveal">Mettiamoci a Tavola</h2>
+            <p class="section-subtitle reveal reveal-delay-1">Raccontaci il tuo progetto, offriamo noi il primo consulto.</p>
 
             <div style="max-width: 600px; margin: 0 auto;">
-                <form style="display: flex; flex-direction: column; gap: 20px;">
-                    <input type="text" placeholder="Nome Azienda" required>
-                    <input type="email" placeholder="Email Aziendale" required>
-                    <select required style="color: #aaa;">
+                <form action="send_email.php" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+                    <input type="text" name="azienda" placeholder="Nome Azienda" required>
+                    <input type="email" name="email_cliente" placeholder="Email Aziendale" required>
+                    <select name="settore" required style="color: #aaa;">
                         <option value="">Seleziona il tuo settore</option>
                         <option value="wine">Vino & Cantine</option>
                         <option value="food">Produzione Alimentare</option>
                         <option value="restaurant">Ristorazione</option>
                     </select>
-                    <textarea placeholder="Di cosa hai bisogno? (Es. Trovare nuovi clienti B2B)" rows="5"></textarea>
+                    <textarea name="messaggio" placeholder="Di cosa hai bisogno?" rows="5"></textarea>
                     <button type="submit" class="btn btn-primary">INVIA RICHIESTA</button>
                 </form>
             </div>
@@ -365,7 +494,8 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
                 <div>
                     <h3>SIGNOR GUSTO</h3>
-                    <p style="color: #888; font-size: 14px;">L'agenzia partner per la crescita del tuo business alimentare.</p>
+                    <p style="color: #888; font-size: 14px;">L'agenzia partner per la crescita del tuo business
+                        alimentare.</p>
                 </div>
                 <div>
                     <h3>SERVIZI</h3>
@@ -395,11 +525,11 @@
         <div class="modal-box">
             <div class="modal-drag-handle"></div>
             <button class="modal-close" id="modal-close">&#10005;</button>
-            <div id="m-icon"  class="m-icon"></div>
-            <div id="m-cat"   class="m-cat"></div>
+            <div id="m-icon" class="m-icon"></div>
+            <div id="m-cat" class="m-cat"></div>
             <div id="m-title" class="m-title"></div>
-            <div id="m-desc"  class="m-desc"></div>
-            <div id="m-tags"  class="m-tags"></div>
+            <div id="m-desc" class="m-desc"></div>
+            <div id="m-tags" class="m-tags"></div>
         </div>
     </div>
 
